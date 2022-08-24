@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.whole-wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-areas: "aside main";
+    background-color: bisque;
+}
+
+.aside-wrap {
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(176, 124, 45);
+}
+.aside-content {
+    width: 50%;
+    height: 50px;
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.aside-nav {
+    display: none;
+}
+
+.main-content-wrap {
+    height: calc(100% - 80px );
+}
+
+.nav-wrap {
+    height: 80px;
+    background-color: rgb(85, 171, 165);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+}
+
+.item2 {
+    padding: 10px;
+    background-color: grey;
+}
+
+.main-wrap {
+    width: 75%;
+    height: 100%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.main-sect {
+    height: 40%;
+    margin: auto;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .whole-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+        background-color: bisque;
+    }
+    .aside-wrap {
+        display: none;
+    }
+    .aside-nav {
+        display: block;
+        width: 25%;
+        height: 50px;
+        background-color: blue;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+}
